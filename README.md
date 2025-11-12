@@ -30,13 +30,13 @@ Other: Dependencies listed in Requirements.txt
   └─ node‑v12.13.1‑x64.msi   ← (Optional installer if needed)  
 
 
+# To Execute project(Python)
 📝 Setup & Installation
   1. Clone the repository:
         git clone https://github.com/khasimShaikh/OnlineExamResults.git
         cd OnlineExamResults
   
   2. Install necessary dependencies:
-        # Example for Python
         pip install -r Requirements.txt
 
   3. Setup your SQL database:
@@ -48,9 +48,7 @@ Other: Dependencies listed in Requirements.txt
   5. Configure the front end / server:
         Update your server config with blockchain contract address & ABI.
         Serve the OnlineExam/ folder or configure your server to render it.
-  6. Run the application:
-        # Example for Node.js server
-        node server.js
+
 
 ✅ Usage / Workflow
 
