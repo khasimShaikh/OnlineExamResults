@@ -1,0 +1,51 @@
+{% load static %}
+<html>
+<head>
+<title>Blockchain Online Exam Results</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<center><font size="4" color="yellow">A Proposed Model for Improving the Reliability
+of Online Exam Results Using Blockchain</font></center>
+		</div>
+		<div id="slogan">
+			
+		</div>
+	</div>
+	<div id="menu">
+		<ul><center>
+	  <li><a href="{% url 'index' %}">Home</a></li>
+      <li><a href="{% url 'AdminLogin' %}">Admin Login</a></li>
+	  <li><a href="{% url 'StudentLogin' %}">Student Login</a></li>
+      <li><a href="{% url 'Register' %}">New User Register Here</a></li>
+			
+		</center></ul>
+		<br class="clearfix" />
+	</div>
+	<div id="splash">
+		<img class="pic" src="{% static 'images/investor.jpg' %}" width="870" height="230" alt="" />
+	</div>
+	<br/>
+	<p align="justify"><font size="3" style="font-family: Comic Sans MS" color="black">
+		Abstract:- In recent times, Learning Management Systems (LMS) have gained significant popularity,
+particularly due to the COVID-19 pandemic, offering improved effectiveness and efficiency. Within LMS,
+online exams have emerged as a critical tool for assessing student's performance and understanding of course
+material, playing a vital role in determining their progression. Ensuring the reliability and transparency
+of online exam results is imperative.
+</p>
+
+<p align="justify"><font size="3" style="font-family: Comic Sans MS" color="black">
+		Any vulnerability, such as hacking, can adversely impact student's
+grades. Conventional online exam systems often store data centrally in databases like MySQL, making them
+susceptible to unauthorized access and manipulation. This paper presents a blockchain-based framework
+to enable secure and peer-to-peer conduction and evaluation of academic exams. The framework uses
+hashing techniques to ensure data integrity and employs proof of stake mechanisms for enhanced security.
+Blockchain's decentralized data storage and cryptographic hashing for each block make it effective in
+safeguarding data integrity.
+</p>
+</body>
+</html>

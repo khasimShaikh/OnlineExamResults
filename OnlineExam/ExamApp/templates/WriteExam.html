@@ -1,0 +1,134 @@
+{% load static %}
+<html>
+<head>
+<title>Blockchain Online Exam Results</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+ <script LANGUAGE="Javascript" >
+function validate(){
+	var x=document.forms["f1"]["username"].value;
+	var y=document.forms["f1"]["password"].value;
+	var c=document.forms["f1"]["contact"].value;
+	var e=document.forms["f1"]["email"].value;
+	var a=document.forms["f1"]["address"].value;
+		
+	if(x == null || x==""){
+		window.alert("Username must be enter");
+		document.f1.username.focus();
+		return false;
+	}
+	if(y == null || y==""){
+		window.alert("Password must be enter");
+		document.f1.password.focus();
+		return false;
+	}
+	if(c == null || c==""){
+		window.alert("Contact No must be enter");
+		document.f1.contact.focus();
+		return false;
+	}
+	if(isNaN(c)){
+		window.alert("Please enter valid contact number");
+		document.f1.contact.focus();
+		return false;
+	}
+	if(e == null || e==""){
+		window.alert("Email ID must be enter");
+		document.f1.email.focus();
+		return false;
+	}
+	var filter = /^([a-zA-Z0-9_\.\-])+\@(gmail+\.)+(com)+$/;
+	if (!filter.test(e)) {
+		window.alert('enter a valid email address');
+		document.f1.email.focus();
+		return false;
+	}
+	if(a == null || a==""){
+		window.alert("Address must be enter");
+		document.f1.address.focus();
+		return false;
+	}
+	return true;
+}
+		
+	
+	</script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<center><font size="4" color="yellow">A Proposed Model for Improving the Reliability
+of Online Exam Results Using Blockchain</font></center>
+		</div>
+		<div id="slogan">
+			
+		</div>
+	</div>
+	<div id="menu">
+		<ul><center>
+      <li><a href="{% url 'WriteExam' %}">Write Exam</a></li>
+	   <li><a href="{% url 'CheckGrade' %}">View Your Grades</a></li>
+	  <li><a href="{% url 'index' %}">Logout</a></li>		
+		</center></ul>
+<br class="clearfix" />
+				</div>
+			
+	<div id="splash">
+		<img class="pic" src="{% static 'images/investor.jpg' %}" width="870" height="230" alt="" />
+	</div>	
+			<center>
+<form name="f1" method="post" action={% url 'WriteExamAction' %} OnSubmit="return validate()">
+	{% csrf_token %}<br/>
+   <h3><b>Write Exam Screen</b></h3>
+   
+	<font size="" color="blue"><center>{{ data|safe }}</center></font>
+						
+						<table align="center" >
+			 <tr><td><font size="" color="black">Question 1. Who developed Python Programming Language?</font></td>
+			 </tr><tr><td><input type="radio" name="t1" value="A"><font size="" color="black">Option A) Wick van Rossum</input></td></tr>
+			 <tr><td><input type="radio" name="t1" value="B"><font size="" color="black">Option B) Rasmus Lerdorf</input></td></tr>
+			 <tr><td><input type="radio" name="t1" value="C"><font size="" color="black">Option C) Guido van Rossum</input></td></tr>
+			 <tr><td><input type="radio" name="t1" value="D"><font size="" color="black">Option D) Niene Stom</input></td></tr>
+			<tr></tr><tr></tr><tr></tr><tr></tr>
+		  
+		 <tr><td><font size="" color="black">Question 2. Which type of Programming does Python support?</font></td>
+			 </tr><tr><td><input type="radio" name="t2" value="A"><font size="" color="black">Option A) Object-Oriented Programming</input></td></tr>
+			 <tr><td><input type="radio" name="t2" value="B"><font size="" color="black">Option B) Structured Programming</input></td></tr>
+			 <tr><td><input type="radio" name="t2" value="C"><font size="" color="black">Option C) Functional Programming</input></td></tr>
+			 <tr><td><input type="radio" name="t2" value="D"><font size="" color="black">Option D) All of the mentioned</input></td></tr>
+			 <tr></tr><tr></tr><tr></tr><tr></tr>
+
+			  <tr><td><font size="" color="black">Question 3. Is Python case sensitive when dealing with identifiers?</font></td>
+			 </tr><tr><td><input type="radio" name="t3" value="A"><font size="" color="black">Option A) No</input></td></tr>
+			 <tr><td><input type="radio" name="t3" value="B"><font size="" color="black">Option B) Yes</input></td></tr>
+			 <tr><td><input type="radio" name="t3" value="C"><font size="" color="black">Option C) Machine Dependent</input></td></tr>
+			 <tr><td><input type="radio" name="t3" value="D"><font size="" color="black">Option D) None of the mentioned</input></td></tr>
+			 <tr></tr><tr></tr><tr></tr><tr></tr>
+
+			 <tr><td><font size="" color="black">Question 4. Which of the following is the correct extension of the Python file?</font></td>
+			 </tr><tr><td><input type="radio" name="t4" value="A"><font size="" color="black">Option A) .python</input></td></tr>
+			 <tr><td><input type="radio" name="t4" value="B"><font size="" color="black">Option B) .pl</input></td></tr>
+			 <tr><td><input type="radio" name="t4" value="C"><font size="" color="black">Option C) .py</input></td></tr>
+			 <tr><td><input type="radio" name="t4" value="D"><font size="" color="black">Option D) .p</input></td></tr>
+			 <tr></tr><tr></tr><tr></tr><tr></tr>
+
+			  <tr><td><font size="" color="black">Question 5.  Is Python code compiled or interpreted?</font></td>
+			 </tr><tr><td><input type="radio" name="t5" value="A"><font size="" color="black">Option A) Python code is both compiled and interpreted</input></td></tr>
+			 <tr><td><input type="radio" name="t5" value="B"><font size="" color="black">Option B) Python code is neither compiled nor interpreted</input></td></tr>
+			 <tr><td><input type="radio" name="t5" value="C"><font size="" color="black">Option C) Python code is only compiled</input></td></tr>
+			 <tr><td><input type="radio" name="t5" value="D"><font size="" color="black">Option D) Python code is only interpreted</input></td></tr>
+			 <tr></tr><tr></tr><tr></tr><tr></tr>
+
+		
+		         
+			<tr><td><input type="submit" value="Submit">
+			</td>
+			</table>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				</div>	
+					
+				</div>
+				
+	</body>
+</html>
