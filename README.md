@@ -19,8 +19,8 @@ Blockchain / Smart Contract: Solidity smart contract (ExamContract.sol) and comp
 Server / Scripting: (specify your backend server language, e.g., Python, Node.js)
 Other: Dependencies listed in Requirements.txt
 
-📁 Directory Structure (high‑level)
-/OnlineExamResults
+📁 Directory Structure (high‑level)/OnlineExamResults
+
   ├─ OnlineExam/            ← Front‑end code  
   ├─ hello‑eth/             ← Ethereum / blockchain setup  
   ├─ ExamContract.sol        ← Solidity smart contract for exam result recording  
@@ -79,5 +79,5 @@ Add notification system (email/SMS) when results are published.
 Feel free to fork this repo, improve it and submit pull requests. If you make improvements, please update the README accordingly and attribute your changes.
 
 🙋 Contact
-For any questions, feel free to raise an issue or contact the author: khasimShaikh.
+For any questions, feel free to raise an issue or contact the author: khasimShaik.
 Thank you for checking out OnlineExamResults! I hope this project helps make exam result systems more secure, transparent and trustworthy.
